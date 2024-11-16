@@ -1199,6 +1199,10 @@ void LocalDerivationGoal::initEnv()
 
     /* Trigger colored output in various tools. */
     env["TERM"] = "xterm-256color";
+
+    /* GENTIX custom compile arguments */
+    env["CFLAGS"] = "-march=znver3 -O2 -pipe -fomit-frame-pointer -fno-semantic-interposition";
+    env["CXXFLAGS"] = "-march=znver3 -O2 -pipe -fomit-frame-pointer -fno-semantic-interposition";
 }
 
 
